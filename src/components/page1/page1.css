@@ -1,0 +1,158 @@
+/* General Styles */
+.page1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, yellow 50%, white 50%);
+  }
+  
+  .curve {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-top-left-radius: 50% 100%;
+    border-bottom-left-radius: 50% 100%;
+    transform: translateX(-50%);
+  }
+  
+  .logo {
+    z-index: 1;
+  }
+  
+  .choose {
+    z-index: 1;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .dinetake {
+    z-index: 1;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  img {
+    height: 200px;
+    width: 200px;
+  }
+  
+  .card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  /* Light Mode Styles */
+  .page1.light {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Dark Mode Styles */
+  .page1.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .page1.dark .background {
+    background: linear-gradient(to right, #444 50%, #222 50%);
+  }
+  
+  .page1.dark .curve {
+    background: #222;
+  }
+  
+  .page1.dark .choose,
+  .page1.dark .logo {
+    color: #fff;
+  }
+  
+  .page1.dark .card {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+  }
+  
+  .page1.dark .card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Toggle Switch Styles */
+  .toggle-container {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-container.light {
+    justify-content: flex-start;
+  }
+  
+  .toggle-container.dark {
+    justify-content: flex-end;
+    background-color: #444242;
+  }
+  
+  .toggle-ball {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-ball.light {
+    background-color: #fff;
+  }
+  
+  .toggle-ball.dark {
+    background-color: #0a0909;
+  }
+  
